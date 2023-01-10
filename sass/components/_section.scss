@@ -1,0 +1,17 @@
+.section-feature {
+  padding: 60px 0px;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
+}
+
+.section--no-padding {
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+  }
+}
+.team {
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+  }
+}

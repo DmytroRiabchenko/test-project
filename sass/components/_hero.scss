@@ -1,0 +1,95 @@
+.hero {
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/Header-tabl-img.jpg');
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .box {
+        background-image: url('../images/Header2xtabl.jpg');
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/Header-deks-img.jpg');
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .box {
+        background-image: url('../images/Header2xdesk.jpg');
+      }
+    }
+  }
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/Header-mob-img.jpg');
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .box {
+      background-image: url('../images/Header2xmob.jpg');
+    }
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__title {
+    color: var(--background-body);
+
+    font-weight: 900;
+    font-size: 26px;
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 44px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    line-height: 1.36;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    color: #ffffff;
+    background: var(--accent-color);
+    cursor: pointer;
+    border-radius: 4px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    display: block;
+    margin: 0 auto;
+    padding: 10px 24px;
+    border: none;
+    transition: color 250ms;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background: var(--hover-focus-color);
+  }
+}

@@ -1,0 +1,36 @@
+.logo {
+  font-family: Raleway;
+
+  font-weight: 700;
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
+  font-size: 24px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--accent-color);
+
+  &__style--black {
+    color: #000000;
+  }
+  &__style--white {
+    color: #ffffff;
+  }
+  &__color {
+    font-family: Raleway;
+
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+
+    // display: flex;
+    display: block;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}

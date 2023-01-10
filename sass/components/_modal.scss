@@ -1,0 +1,314 @@
+.modal-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms, visibility 250ms;
+}
+
+.modal-backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+label.modal__checkbox-text {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    font-size: 14px;
+  }
+  display: -webkit-inline-flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  padding: 40px;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+    padding: 40px;
+  }
+  left: 536px;
+  top: 221px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms;
+  &__close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    fill: currentColor;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__close:focus {
+    outline: none;
+    color: #188ce8;
+  }
+
+  /*Заполнение модального окна*/
+
+  &__title {
+    width: 370px;
+    @media screen and (min-width: 1200px) {
+      height: 23px;
+    }
+    height: 60px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    text-align: center;
+
+    letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1200px) {
+      width: 448px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 12px;
+    }
+
+    color: #212121;
+  }
+
+  &__input {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: #757575;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    padding-left: 42px;
+  }
+
+  &__input:focus + &__svg {
+    color: var(--hover-focus-color);
+    transition: transform 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__input:focus {
+    outline: none;
+    border: 1px solid var(--hover-focus-color);
+    transition: transform 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__svg {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--title-text-color);
+    fill: currentColor;
+  }
+
+  &__comment {
+    @media screen and (min-width: 1200px) {
+      width: 448px;
+    }
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    display: block;
+
+    padding: 16px 12px;
+    margin-top: 4px;
+  }
+
+  &__comment:focus {
+    outline: none;
+    border: 1px solid var(--hover-focus-color);
+    transition: transform 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /*
+.modal__svg:hover,
+.modal__svg:focus {
+  color: var(--background-body);
+  background: var(--accent-color);
+}*/
+
+  /*.modal-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+*/
+  &__input-group {
+    font-weight: 400;
+    margin-top: 4px;
+  }
+
+  &__input-group--label {
+    display: block;
+  }
+
+  &__label-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    letter-spacing: 0.01em;
+
+    color: #757575;
+  }
+
+  &__checkbox {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+
+    color: #757575;
+
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  /*.checkbox-text::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  display: block;
+  margin-right: 9px;
+}*/
+
+  /*align-items: center;
+  justify-content: center;*/
+
+  /*.input-check:checked + label::before {
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/check.svg);
+  background-color: var(--accent-color);
+}*/
+
+  &__span-label {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+    margin-right: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__span-label svg {
+    fill: transparent;
+  }
+
+  &__input-check:checked + label > span {
+    border: 0.2px solid #ffffff;
+    background-color: var(--accent-color);
+  }
+  &__input-check:checked + label > span svg {
+    fill: var(--background-body);
+  }
+
+  &__link {
+    color: var(--accent-color);
+    margin-left: 8px;
+  }
+
+  &__button {
+    color: #ffffff;
+    background: var(--accent-color);
+    cursor: pointer;
+    border-radius: 4px;
+
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    display: block;
+    margin: 0 auto;
+    padding: 10px 24px;
+    border: none;
+    transition: color 250ms;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &__input-wrapper {
+    position: relative;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/*.modal__close {
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  margin-top: 8px;
+
+  background: #ffffff;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  border: none;
+
+  align-items: center;
+  justify-content: center;
+} */
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

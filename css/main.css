@@ -412,54 +412,6 @@ body {
   cursor: pointer;
 }
 
-.about {
-  display: none;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  margin-bottom: 50px;
-}
-@media screen and (min-width: 1200px) {
-  .about {
-    display: block;
-  }
-}
-.about__list {
-  display: none;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 1200px) {
-  .about__list {
-    display: flex;
-  }
-}
-.about__item {
-  margin-right: 30px;
-  position: relative;
-}
-.about__item:nth-child(3n) {
-  margin-right: 0;
-}
-.about__img {
-  position: absolute;
-  bottom: 0;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: rgba(47, 48, 58, 0.8);
-  width: 370px;
-  height: 70px;
-  padding: 27px;
-}
-
 /*.about {
   color: var(--title-text-color);
 
@@ -512,10 +464,6 @@ body {
   padding-top: 0;
 }
 */
-.section--no-padding {
-  padding-top: 0;
-}
-
 .team {
   background-color: var(--backgraund-section);
 }
@@ -1501,6 +1449,194 @@ label.modal__checkbox-text {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.container {
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0 auto;
+  background: #84a178;
+}
+
+.abouts {
+  position: absolute;
+  width: 1200px;
+  height: 1228px;
+  left: 0px;
+  top: 0px;
+  background: #84a178;
+}
+
+.abouts__label {
+  position: absolute;
+  width: 376px;
+  height: 37px;
+  left: 412px;
+  top: 60px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 37px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
+
+.abouts__title {
+  position: absolute;
+  width: 481px;
+  height: 45px;
+  left: 360px;
+  top: 109px;
+  font-family: "Seymour One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
+
+.abouts__subtitle1 {
+  position: absolute;
+  width: 463px;
+  height: 111px;
+  left: 616px;
+  top: 326px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 176%;
+  /* or 28px */
+  letter-spacing: 0.04em;
+  color: #fcfcfc;
+}
+
+.abouts__subtitle2 {
+  position: absolute;
+  width: 463px;
+  height: 107px;
+  left: 616px;
+  top: 445px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 194%;
+  /* or 27px */
+  letter-spacing: 0.04em;
+  color: #fcfcfc;
+}
+
+.abouts__subtitle3 {
+  position: absolute;
+  width: 457px;
+  height: 23px;
+  left: 616px;
+  top: 560px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 194%;
+  /* or 27px */
+  letter-spacing: 0.04em;
+  color: #fcfcfc;
+}
+
+.abouts__picture {
+  position: absolute;
+  width: 491px;
+  height: 529px;
+  left: 16px;
+  top: 236px;
+}
+
+.abouts__button {
+  width: 164px;
+  height: 42px;
+  left: 616px;
+  top: 637px;
+  position: absolute;
+  cursor: pointer;
+  background: #f8d24e;
+  border-radius: 10px;
+  border: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.abouts__button:hover {
+  color: #000000;
+  background-color: #0a8817;
+}
+
+.abouts__button:focus {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  color: #fcfcfc;
+}
+
+.abouts__items {
+  display: flex;
+  position: absolute;
+  width: 1168px;
+  height: 225px;
+  left: 16px;
+  top: 825px;
+}
+
+.abouts__heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 71px;
+  /* identical to box height */
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
+
+.abouts__text {
+  display: flex;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 176%;
+  /* or 28px */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #fcfcfc;
+}
+
+.abouts__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 /* вторичный основоного текста #212121 */
